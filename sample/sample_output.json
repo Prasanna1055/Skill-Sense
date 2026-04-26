@@ -1,0 +1,157 @@
+{
+  "input": {
+    "jobRole": "Senior Full-Stack Engineer",
+    "company": "FinTech Startup",
+    "candidateName": "Alex Johnson"
+  },
+  "skills_extracted": [
+    { "id": "react", "name": "React.js", "importance": "critical", "resumeClaim": "4+ years, Redux, React Query, 10+ apps built" },
+    { "id": "nodejs", "name": "Node.js", "importance": "critical", "resumeClaim": "4 years, Express, 50k+ req/day APIs" },
+    { "id": "postgresql", "name": "PostgreSQL", "importance": "critical", "resumeClaim": "Uses MySQL; no PostgreSQL specifically mentioned" },
+    { "id": "aws", "name": "AWS", "importance": "important", "resumeClaim": "Cloud Practitioner cert (foundational); Heroku deployments" },
+    { "id": "system_design", "name": "System Design", "importance": "important", "resumeClaim": "Not explicitly mentioned" }
+  ],
+  "assessment_scores": {
+    "react": {
+      "score": 3.8,
+      "label": "Intermediate-Advanced",
+      "rationale": "Alex demonstrated solid working knowledge of React hooks and Redux patterns. Struggled with advanced optimization (memo/useCallback tradeoffs) but understood component architecture well. State management answers were practical and experience-backed.",
+      "strengths": ["Redux integration", "Component composition", "Practical project experience"],
+      "gaps": ["Performance optimization (memo, useMemo)", "React testing patterns", "Concurrent features (Suspense, transitions)"],
+      "nextStep": "Deep-dive into React performance profiling and learn useMemo/useCallback tradeoffs through the React docs and Josh Comeau's course"
+    },
+    "nodejs": {
+      "score": 3.5,
+      "label": "Intermediate",
+      "rationale": "Good practical Express experience with real traffic. Lacked depth on event loop internals and stream handling. Error handling patterns were basic.",
+      "strengths": ["REST API design", "JWT authentication", "Database integration"],
+      "gaps": ["Event loop deep understanding", "Stream handling", "Fastify/modern frameworks", "Worker threads"],
+      "nextStep": "Study Node.js event loop mechanics with the libuv documentation and practice with streams"
+    },
+    "postgresql": {
+      "score": 2.1,
+      "label": "Beginner",
+      "rationale": "Alex has relational database experience with MySQL but PostgreSQL-specific knowledge is limited. Could not discuss JSONB, CTE syntax, or window functions. Schema design instincts are reasonable but query optimization knowledge is surface-level.",
+      "strengths": ["Relational schema design basics", "Normalization concepts", "JOIN understanding"],
+      "gaps": ["PostgreSQL-specific features (JSONB, arrays)", "Query explain/analyze", "Indexing strategies", "CTEs and window functions", "Connection pooling (PgBouncer)"],
+      "nextStep": "Complete the PostgreSQL Tutorial (postgresqltutorial.com) and practice with EXPLAIN ANALYZE on real queries"
+    },
+    "aws": {
+      "score": 1.8,
+      "label": "Novice",
+      "rationale": "Cloud Practitioner certification shows foundational awareness but no hands-on infrastructure experience. Could not speak to ECS task definitions, RDS parameter groups, or CloudWatch alarms. Heroku experience doesn't translate directly.",
+      "strengths": ["Understands cloud concepts (regions, AZs)", "S3 basics from projects"],
+      "gaps": ["ECS / containerized deployments", "RDS configuration and tuning", "CloudWatch monitoring setup", "IAM roles and policies", "VPC networking basics"],
+      "nextStep": "Build a complete deployment: containerize the ShopDash project with Docker, push to ECR, and deploy to ECS Fargate with an RDS backend"
+    },
+    "system_design": {
+      "score": 2.3,
+      "label": "Beginner",
+      "rationale": "Alex understands single-service patterns well but lacks distributed systems vocabulary. Could not discuss CAP theorem, consistent hashing, or database replication patterns. Answers were concrete but limited to monolithic architecture patterns.",
+      "strengths": ["Practical problem-solving approach", "Database integration patterns"],
+      "gaps": ["Distributed systems fundamentals", "CAP theorem", "Load balancing strategies", "Caching patterns", "Message queues"],
+      "nextStep": "Read 'Designing Data-Intensive Applications' (Kleppmann) and study the system design primer on GitHub"
+    }
+  },
+  "learning_plan": {
+    "overallSummary": "Alex is a capable mid-level engineer with strong React and Node.js foundations. The main blockers for this senior role are PostgreSQL depth (currently using MySQL), AWS infrastructure experience (certification only, no hands-on), and distributed systems design knowledge. With 10–14 weeks of focused learning, Alex could credibly compete for this role.",
+    "readinessScore": 58,
+    "readinessLabel": "Partially Ready — Strong Foundation",
+    "prioritySkills": ["PostgreSQL", "AWS"],
+    "learningPath": [
+      {
+        "skill": "PostgreSQL",
+        "currentScore": 2.1,
+        "targetScore": 4.0,
+        "estimatedWeeks": 5,
+        "priority": "high",
+        "steps": [
+          {
+            "title": "Fundamentals & Syntax",
+            "description": "Core PostgreSQL syntax, data types, and what makes it different from MySQL",
+            "days": 10,
+            "resources": [
+              { "name": "PostgreSQL Tutorial (postgresqltutorial.com)", "type": "tutorial", "url": "https://www.postgresqltutorial.com/", "timeEstimate": "12 hours", "free": true },
+              { "name": "Learn PostgreSQL — Full Course (freeCodeCamp YouTube)", "type": "video", "url": "https://www.youtube.com/watch?v=qw--VYLpxG4", "timeEstimate": "8 hours", "free": true }
+            ],
+            "practiceTask": "Migrate your ShopDash MySQL schema to PostgreSQL. Use JSONB for flexible product metadata. Write equivalent queries and note differences."
+          },
+          {
+            "title": "Query Optimization & Indexing",
+            "description": "EXPLAIN ANALYZE, B-tree vs GIN indexes, partial indexes, query planning",
+            "days": 12,
+            "resources": [
+              { "name": "Use The Index, Luke (use-the-index-luke.com)", "type": "tutorial", "url": "https://use-the-index-luke.com/", "timeEstimate": "6 hours", "free": true },
+              { "name": "PostgreSQL Official Docs — Performance Tips", "type": "docs", "url": "https://www.postgresql.org/docs/current/performance-tips.html", "timeEstimate": "4 hours", "free": true }
+            ],
+            "practiceTask": "Run EXPLAIN ANALYZE on 5 slow queries in ShopDash. Add indexes where appropriate and document the query plan improvements."
+          },
+          {
+            "title": "Advanced Features",
+            "description": "CTEs, window functions, JSONB operations, full-text search",
+            "days": 10,
+            "resources": [
+              { "name": "Advanced SQL for Data Scientists (Mode Analytics)", "type": "tutorial", "url": "https://mode.com/sql-tutorial/", "timeEstimate": "5 hours", "free": true },
+              { "name": "PostgreSQL: Up and Running, 3rd Ed (O'Reilly)", "type": "book", "url": "https://www.oreilly.com/library/view/postgresql-up-and/9781492057994/", "timeEstimate": "8 hours", "free": false }
+            ],
+            "practiceTask": "Rewrite your AutoReport analytics queries using window functions (LAG, LEAD, ROW_NUMBER). Add a full-text search feature to ShopDash products."
+          }
+        ]
+      },
+      {
+        "skill": "AWS",
+        "currentScore": 1.8,
+        "targetScore": 3.5,
+        "estimatedWeeks": 6,
+        "priority": "high",
+        "steps": [
+          {
+            "title": "Hands-On Foundations",
+            "description": "IAM, VPC, EC2, S3, RDS — build real infrastructure, not just theory",
+            "days": 14,
+            "resources": [
+              { "name": "AWS Free Tier — Hands-on Labs", "type": "practice", "url": "https://aws.amazon.com/free/", "timeEstimate": "20 hours", "free": true },
+              { "name": "AWS Skill Builder — Solutions Architect Learning Path", "type": "course", "url": "https://explore.skillbuilder.aws/learn", "timeEstimate": "15 hours", "free": true }
+            ],
+            "practiceTask": "Deploy ShopDash manually: EC2 + RDS PostgreSQL + S3 for assets. Configure security groups, IAM roles. Don't use Elastic Beanstalk — do it manually."
+          },
+          {
+            "title": "Containers & ECS",
+            "description": "Docker, ECR, ECS Fargate, task definitions, service auto-scaling",
+            "days": 14,
+            "resources": [
+              { "name": "Docker & Kubernetes — Full Course (TechWorld YouTube)", "type": "video", "url": "https://www.youtube.com/watch?v=3c-iBn73dDE", "timeEstimate": "10 hours", "free": true },
+              { "name": "AWS ECS Workshop (ecsworkshop.com)", "type": "tutorial", "url": "https://ecsworkshop.com/", "timeEstimate": "8 hours", "free": true }
+            ],
+            "practiceTask": "Containerize ShopDash with Docker, push image to ECR, deploy to ECS Fargate. Set up a CloudWatch dashboard with CPU/memory/request latency alarms."
+          }
+        ]
+      },
+      {
+        "skill": "System Design",
+        "currentScore": 2.3,
+        "targetScore": 3.5,
+        "estimatedWeeks": 8,
+        "priority": "medium",
+        "steps": [
+          {
+            "title": "Distributed Systems Fundamentals",
+            "description": "CAP theorem, consistency models, replication, partitioning",
+            "days": 21,
+            "resources": [
+              { "name": "Designing Data-Intensive Applications (Kleppmann)", "type": "book", "url": "https://www.oreilly.com/library/view/designing-data-intensive-applications/9781491903063/", "timeEstimate": "30 hours", "free": false },
+              { "name": "System Design Primer (GitHub)", "type": "tutorial", "url": "https://github.com/donnemartin/system-design-primer", "timeEstimate": "10 hours", "free": true }
+            ],
+            "practiceTask": "Design the ShopDash system for 10M daily users. Write a 1-page architecture doc covering: database choices, caching layer, CDN, background jobs, and how you'd handle Black Friday traffic spikes."
+          }
+        ]
+      }
+    ],
+    "quickWins": [
+      "TODAY: Install PostgreSQL locally and spend 1 hour converting your ShopDash schema from MySQL — the hands-on exposure is worth more than any tutorial",
+      "THIS WEEK: Create an AWS free tier account and deploy any app to EC2 manually (not Elastic Beanstalk) — this closes the 'no hands-on experience' gap immediately",
+      "THIS MONTH: Read the first 4 chapters of 'Designing Data-Intensive Applications' and practice explaining the CAP theorem out loud — senior interviews almost always include this"
+    ],
+    "totalWeeks": 13
+  }
+}

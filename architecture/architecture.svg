@@ -1,0 +1,135 @@
+<svg viewBox="0 0 960 620" xmlns="http://www.w3.org/2000/svg" font-family="DM Sans, sans-serif">
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 Z" fill="#4f6dff"/>
+    </marker>
+    <marker id="arr2" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 Z" fill="#00bcd4"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="960" height="620" fill="#080f1e" rx="12"/>
+
+  <!-- Title -->
+  <text x="480" y="38" text-anchor="middle" fill="#dce8f8" font-size="20" font-weight="800">SkillSense — Architecture Overview</text>
+  <text x="480" y="58" text-anchor="middle" fill="#3a5070" font-size="12">AI-Powered Skill Assessment &amp; Personalized Learning Plan Agent</text>
+
+  <!-- LAYER LABELS -->
+  <text x="30" y="88" fill="#3a5070" font-size="10" font-weight="700" letter-spacing="1.5">INPUT LAYER</text>
+  <text x="30" y="228" fill="#3a5070" font-size="10" font-weight="700" letter-spacing="1.5">AGENT PIPELINE</text>
+  <text x="30" y="448" fill="#3a5070" font-size="10" font-weight="700" letter-spacing="1.5">OUTPUT LAYER</text>
+
+  <!-- Dividers -->
+  <line x1="24" y1="236" x2="936" y2="236" stroke="#1e3050" stroke-width="1" stroke-dasharray="4 4"/>
+  <line x1="24" y1="456" x2="936" y2="456" stroke="#1e3050" stroke-width="1" stroke-dasharray="4 4"/>
+
+  <!-- ─────── INPUT: JD Box ─────── -->
+  <rect x="60" y="96" width="180" height="100" rx="10" fill="#0d1b2e" stroke="#4f6dff" stroke-width="1.5"/>
+  <text x="150" y="122" text-anchor="middle" fill="#dce8f8" font-size="13" font-weight="700">📋 Job Description</text>
+  <text x="150" y="142" text-anchor="middle" fill="#5a7090" font-size="11">Required skills</text>
+  <text x="150" y="158" text-anchor="middle" fill="#5a7090" font-size="11">Importance levels</text>
+  <text x="150" y="174" text-anchor="middle" fill="#5a7090" font-size="11">Experience expectations</text>
+
+  <!-- ─────── INPUT: Resume Box ─────── -->
+  <rect x="280" y="96" width="180" height="100" rx="10" fill="#0d1b2e" stroke="#4f6dff" stroke-width="1.5"/>
+  <text x="370" y="122" text-anchor="middle" fill="#dce8f8" font-size="13" font-weight="700">📄 Resume</text>
+  <text x="370" y="142" text-anchor="middle" fill="#5a7090" font-size="11">Claimed experience</text>
+  <text x="370" y="158" text-anchor="middle" fill="#5a7090" font-size="11">Project history</text>
+  <text x="370" y="174" text-anchor="middle" fill="#5a7090" font-size="11">Technology stack</text>
+
+  <!-- Arrows into pipeline -->
+  <line x1="150" y1="196" x2="290" y2="258" stroke="#4f6dff" stroke-width="1.5" marker-end="url(#arr)"/>
+  <line x1="370" y1="196" x2="310" y2="258" stroke="#4f6dff" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- ─────── PIPELINE STAGE 1: Extraction ─────── -->
+  <rect x="210" y="258" width="180" height="80" rx="10" fill="#0d2040" stroke="#4f6dff" stroke-width="2"/>
+  <text x="300" y="284" text-anchor="middle" fill="#4f6dff" font-size="11" font-weight="700">STAGE 1</text>
+  <text x="300" y="302" text-anchor="middle" fill="#dce8f8" font-size="13" font-weight="700">🔍 Skill Extraction</text>
+  <text x="300" y="320" text-anchor="middle" fill="#5a7090" font-size="11">Claude parses JD + Resume</text>
+  <text x="300" y="334" text-anchor="middle" fill="#5a7090" font-size="11">Generates 3 Qs per skill</text>
+
+  <!-- Arrow to Stage 2 -->
+  <line x1="390" y1="298" x2="450" y2="298" stroke="#4f6dff" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- ─────── PIPELINE STAGE 2: Chat Loop ─────── -->
+  <rect x="450" y="258" width="180" height="80" rx="10" fill="#0d2040" stroke="#00bcd4" stroke-width="2"/>
+  <text x="540" y="284" text-anchor="middle" fill="#00bcd4" font-size="11" font-weight="700">STAGE 2</text>
+  <text x="540" y="302" text-anchor="middle" fill="#dce8f8" font-size="13" font-weight="700">💬 Assessment Loop</text>
+  <text x="540" y="320" text-anchor="middle" fill="#5a7090" font-size="11">Q&amp;A cycle per skill</text>
+  <text x="540" y="334" text-anchor="middle" fill="#5a7090" font-size="11">3 questions × N skills</text>
+
+  <!-- Self-loop arrow for chat -->
+  <path d="M 540 258 Q 580 232 620 258" fill="none" stroke="#00bcd4" stroke-width="1.5" stroke-dasharray="4 3" marker-end="url(#arr2)"/>
+  <text x="586" y="244" text-anchor="middle" fill="#00bcd4" font-size="10">loop</text>
+
+  <!-- Arrow to Stage 3 -->
+  <line x1="630" y1="298" x2="688" y2="298" stroke="#00bcd4" stroke-width="1.5" marker-end="url(#arr2)"/>
+
+  <!-- ─────── PIPELINE STAGE 3: Scoring ─────── -->
+  <rect x="688" y="258" width="180" height="80" rx="10" fill="#0d2040" stroke="#f59e0b" stroke-width="2"/>
+  <text x="778" y="284" text-anchor="middle" fill="#f59e0b" font-size="11" font-weight="700">STAGE 3</text>
+  <text x="778" y="302" text-anchor="middle" fill="#dce8f8" font-size="13" font-weight="700">📊 Scoring Engine</text>
+  <text x="778" y="320" text-anchor="middle" fill="#5a7090" font-size="11">1–5 score per skill</text>
+  <text x="778" y="334" text-anchor="middle" fill="#5a7090" font-size="11">Strengths + gap analysis</text>
+
+  <!-- Arrow down to Stage 4 -->
+  <line x1="778" y1="338" x2="778" y2="392" stroke="#f59e0b" stroke-width="1.5" marker-end="url(#arr)"/>
+  <line x1="778" y1="392" x2="540" y2="392" stroke="#f59e0b" stroke-width="1.5"/>
+  <line x1="540" y1="392" x2="540" y2="456" stroke="#22c55e" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- ─────── PIPELINE STAGE 4: Plan Generation ─────── -->
+  <rect x="450" y="380" width="180" height="70" rx="10" fill="#0d2040" stroke="#22c55e" stroke-width="2"/>
+  <text x="540" y="404" text-anchor="middle" fill="#22c55e" font-size="11" font-weight="700">STAGE 4</text>
+  <text x="540" y="422" text-anchor="middle" fill="#dce8f8" font-size="13" font-weight="700">🗺️ Plan Generation</text>
+  <text x="540" y="440" text-anchor="middle" fill="#5a7090" font-size="11">Curated resources + timeline</text>
+
+  <!-- ─────── Claude API Box ─────── -->
+  <rect x="730" y="90" width="190" height="116" rx="10" fill="#110822" stroke="#8b5cf6" stroke-width="1.5"/>
+  <text x="825" y="116" text-anchor="middle" fill="#8b5cf6" font-size="13" font-weight="800">🤖 Claude API</text>
+  <text x="825" y="134" text-anchor="middle" fill="#5a7090" font-size="11">claude-sonnet-4</text>
+  <line x1="745" y1="142" x2="910" y2="142" stroke="#2a1840" stroke-width="1"/>
+  <text x="825" y="158" text-anchor="middle" fill="#5a7090" font-size="10">buildExtractionPrompt()</text>
+  <text x="825" y="174" text-anchor="middle" fill="#5a7090" font-size="10">buildAckPrompt()</text>
+  <text x="825" y="190" text-anchor="middle" fill="#5a7090" font-size="10">buildScoringPrompt()</text>
+  <text x="825" y="206" text-anchor="middle" fill="#5a7090" font-size="10">buildPlanPrompt()</text>
+
+  <!-- Arrow Claude <-> Pipeline -->
+  <line x1="730" y1="148" x2="688" y2="290" stroke="#8b5cf6" stroke-width="1" stroke-dasharray="5 3"/>
+
+  <!-- ─────── OUTPUT LAYER ─────── -->
+  <!-- Score Card -->
+  <rect x="60" y="468" width="190" height="110" rx="10" fill="#0d1b2e" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="155" y="494" text-anchor="middle" fill="#f59e0b" font-size="13" font-weight="700">📊 Skill Scores</text>
+  <text x="155" y="512" text-anchor="middle" fill="#5a7090" font-size="11">1.0–5.0 per skill</text>
+  <text x="155" y="528" text-anchor="middle" fill="#5a7090" font-size="11">Novice → Expert labels</text>
+  <text x="155" y="544" text-anchor="middle" fill="#5a7090" font-size="11">Strengths identified</text>
+  <text x="155" y="560" text-anchor="middle" fill="#5a7090" font-size="11">Gaps documented</text>
+
+  <!-- Readiness -->
+  <rect x="275" y="468" width="190" height="110" rx="10" fill="#0d1b2e" stroke="#4f6dff" stroke-width="1.5"/>
+  <text x="370" y="494" text-anchor="middle" fill="#4f6dff" font-size="13" font-weight="700">🎯 Readiness Score</text>
+  <text x="370" y="512" text-anchor="middle" fill="#5a7090" font-size="11">0–100 composite</text>
+  <text x="370" y="528" text-anchor="middle" fill="#5a7090" font-size="11">Weighted by importance</text>
+  <text x="370" y="544" text-anchor="middle" fill="#5a7090" font-size="11">Role-fit label</text>
+  <text x="370" y="560" text-anchor="middle" fill="#5a7090" font-size="11">Overall summary</text>
+
+  <!-- Learning Path -->
+  <rect x="490" y="468" width="190" height="110" rx="10" fill="#0d1b2e" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="585" y="494" text-anchor="middle" fill="#22c55e" font-size="13" font-weight="700">📚 Learning Path</text>
+  <text x="585" y="512" text-anchor="middle" fill="#5a7090" font-size="11">Per-skill roadmap</text>
+  <text x="585" y="528" text-anchor="middle" fill="#5a7090" font-size="11">Curated resources</text>
+  <text x="585" y="544" text-anchor="middle" fill="#5a7090" font-size="11">Week estimates</text>
+  <text x="585" y="560" text-anchor="middle" fill="#5a7090" font-size="11">Practice tasks</text>
+
+  <!-- Quick Wins -->
+  <rect x="705" y="468" width="190" height="110" rx="10" fill="#0d1b2e" stroke="#00bcd4" stroke-width="1.5"/>
+  <text x="800" y="494" text-anchor="middle" fill="#00bcd4" font-size="13" font-weight="700">⚡ Quick Wins</text>
+  <text x="800" y="512" text-anchor="middle" fill="#5a7090" font-size="11">Today's actions</text>
+  <text x="800" y="528" text-anchor="middle" fill="#5a7090" font-size="11">This week's actions</text>
+  <text x="800" y="544" text-anchor="middle" fill="#5a7090" font-size="11">This month's actions</text>
+  <text x="800" y="560" text-anchor="middle" fill="#5a7090" font-size="11">Priority ordering</text>
+
+  <!-- Legend -->
+  <rect x="60" y="596" width="840" height="1" fill="#1e3050"/>
+</svg>

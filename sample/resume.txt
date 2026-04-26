@@ -1,0 +1,49 @@
+ALEX JOHNSON
+alex.johnson@email.com | github.com/alexj | linkedin.com/in/alexjohnson
+Mumbai, India (Open to US remote)
+
+SUMMARY
+Full-stack software engineer with 4 years of experience building web applications.
+Strong React frontend skills; backend experience with Node.js and REST APIs.
+Looking to grow into a senior engineering role at a product-driven company.
+
+SKILLS
+Languages: JavaScript (ES6+), TypeScript (basic), HTML/CSS, some Python scripting
+Frontend: React, Redux, React Query, Tailwind CSS, Webpack
+Backend: Node.js, Express.js, REST APIs, JWT auth
+Databases: MySQL, MongoDB (basic), Redis (basic)
+Tools: Git, Docker (basic), Jest, GitHub Actions
+Cloud: Some experience with Heroku deployments; AWS free tier experiments
+
+EXPERIENCE
+
+Software Engineer — Agency XYZ (2022–Present)
+• Built 10+ client-facing React applications with Redux state management
+• Developed Node.js/Express REST APIs serving 50k+ daily requests
+• Used MySQL for relational data; designed normalized schemas for 3 products
+• Introduced unit testing with Jest; improved coverage from 20% to 75%
+• Participated in agile sprints; reviewed code for 2 junior developers
+• Led migration of legacy jQuery app to React over 6 months
+
+Junior Developer — WebStudio (2020–2022)
+• Built and maintained React component libraries for e-commerce platforms
+• Wrote Python scripts to automate data exports from CMS
+• Deployed applications to Heroku; basic Docker containerization
+• Integrated third-party APIs (Stripe, SendGrid, Twilio)
+
+EDUCATION
+B.Tech in Computer Science — Mumbai University, 2020
+GPA: 8.4/10 | Relevant coursework: Data Structures, DBMS, OS, Networks
+
+PROJECTS
+• ShopDash: E-commerce analytics dashboard (React + Node.js + MySQL + Redis)
+  - Real-time sales charts, inventory alerts, user cohort analysis
+  - github.com/alexj/shopdash
+
+• AutoReport: Python/Node.js tool for weekly analytics report generation
+  - Pulls from multiple APIs, generates PDF reports, sends via email
+  - github.com/alexj/autoreport
+
+CERTIFICATIONS
+• AWS Cloud Practitioner (2023) — foundational knowledge, no hands-on infra experience
+• Meta Frontend Developer Certificate (2022)

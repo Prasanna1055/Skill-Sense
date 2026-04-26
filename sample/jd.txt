@@ -1,0 +1,30 @@
+Senior Full-Stack Engineer — FinTech Startup (Series B)
+
+We're building the next generation of payment infrastructure. Join our core engineering
+team to design and ship features used by millions of merchants worldwide.
+
+RESPONSIBILITIES
+• Design and implement scalable REST APIs and microservices
+• Build responsive React frontends with excellent UX
+• Architect PostgreSQL database schemas and optimize query performance
+• Deploy and manage services on AWS (ECS, RDS, S3, Lambda)
+• Collaborate with product and design teams in agile sprints
+• Mentor junior engineers and conduct code reviews
+
+REQUIRED SKILLS
+• React.js — 4+ years, hooks, state management (Redux/Zustand)
+• Node.js — 3+ years, Express or Fastify
+• PostgreSQL — schema design, indexing, query optimization
+• AWS — EC2, ECS, RDS, S3, CloudWatch
+• System Design — distributed systems, scalability patterns
+
+NICE TO HAVE
+• Docker & Kubernetes
+• TypeScript (advanced)
+• Redis / caching strategies
+• GraphQL
+
+COMPENSATION
+• $140,000–$170,000 base salary
+• Equity: 0.1–0.3%
+• Remote-friendly (US timezone)
